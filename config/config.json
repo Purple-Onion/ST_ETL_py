@@ -1,0 +1,18 @@
+{
+    "pipeline": {
+        "name": "default_pipeline",
+        "log_level": "INFO"
+    },
+    "extract": {
+        "batch_size": 1000,
+        "timeout": 30
+    },
+    "transform": {
+        "drop_duplicates": true,
+        "drop_na": false
+    },
+    "load": {
+        "batch_size": 500,
+        "if_exists": "append"
+    }
+}
